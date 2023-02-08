@@ -1,0 +1,37 @@
+.popup__botton {
+  margin: 0;
+  margin-top: 47px;
+  padding-top: 15px;
+  background: #000000;
+  border-radius: 2px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.popup__botton:hover {
+  opacity: 0.8;
+}
+
+@media (min-width: 900px) {
+  .popup__botton {
+    width: 358px;
+    height: 35px;
+    font-size: 18px;
+    line-height: 22px;
+    margin-left: 36px;
+    margin-top: 46px;
+  }
+}
+
+@media (max-width: 900px) {
+  .popup__botton {
+    margin-left: 22px;
+    width: 238px;
+    height: 31px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

@@ -1,0 +1,27 @@
+.popup__profile {
+  margin: 0;
+  margin-left: 36px;
+  margin-top: 28px;
+  height: 28px;
+  opacity: 0.2;
+  border-bottom: 1px solid #000000;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000;
+}
+
+@media (min-width: 900px) {
+  .popup__profile {
+  width: 358px;
+  }
+}
+
+@media (max-width: 900px) {
+    .popup__profile {
+      margin-left: 22px;
+  width: 238px;
+  }
+}

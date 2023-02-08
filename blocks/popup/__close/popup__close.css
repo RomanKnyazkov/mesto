@@ -1,0 +1,23 @@
+.popup__close {
+  position: absolute;
+}
+
+@media (min-width: 900px) {
+  .popup__close {
+  background-image: url(../../../images/close.svg);
+  width: 32px;
+  height: 32px;
+  top: -39px;
+  right: -39px;
+  }
+}
+
+@media (max-width: 900px) {
+  .popup__close {
+    background-image: url(../../../images/closeMobile.svg);
+    width: 20px;
+    height: 20px;
+    top: -36px;
+    right: 0px;
+    }
+  }
