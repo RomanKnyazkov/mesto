@@ -1,0 +1,27 @@
+.pen {
+  position: absolute;
+}
+
+.pen:hover {
+  opacity: 0.6;
+}
+
+@media (min-width: 900px) {
+  .pen {
+    background-image: url(../../images/pen.svg);
+    height: 24px;
+    width: 24px;
+    right: 15px;
+    top: 34px;
+  }
+}
+
+@media (max-width: 900px) {
+  .pen {
+    background-image: url(../../images/penMobil.svg);
+    height: 18px;
+    width: 18px;
+    right: 38px;
+    top: 8px;
+  }
+}

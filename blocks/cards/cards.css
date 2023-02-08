@@ -1,0 +1,16 @@
+.cards {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 900px) {
+  .cards {
+  margin-top: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cards {
+  margin-top: 35px;
+  }
+}

@@ -1,0 +1,6 @@
+.cards__image {
+  display: block;
+  object-fit: cover;
+  text-align: start;
+  width: 100%;
+}
