@@ -4,11 +4,11 @@
   font-family: 'Inter';
   font-style: normal;
   color: #FFFFFF;
+  font-weight: 400;
 }
 
 @media (min-width: 900px) {
   .profile__text {
-    font-weight: 400;
     font-size: 18px;
     line-height: 22px;
   }
@@ -16,7 +16,6 @@
 
 @media (max-width: 900px) {
   .profile__text {
-    font-weight: 400;
     font-size: 14px;
     line-height: 17px;
   }

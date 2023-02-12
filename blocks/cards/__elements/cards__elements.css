@@ -2,13 +2,13 @@
   display: grid;
   margin: 0;
   padding: 0;
+  gap: 20px 17px;
 }
 
 @media (min-width: 900px) {
   .cards__elements {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 20px 17px;
   }
 }
 
@@ -16,7 +16,5 @@
 .cards__elements {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 20px 17px;
-  margin: 0;
   }
 }
