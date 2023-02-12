@@ -5,13 +5,11 @@ const popup = document.querySelector('.popup');
 const buttonClosePopup = document.querySelector('.popup__close');
 
 const handleOpenButtonClick = () => {
-  popup.style.opacity = '1';
-  popup.style.pointerEvents = 'all';
+  popup.style.display = 'flex';
 }
 
 const handleCloseButtonClick = () => {
-  popup.style.opacity = '0';
-  popup.style.pointerEvents = 'none';
+  popup.style.display = 'none';
 }
 
 buttonOpenPopup.addEventListener('click', handleOpenButtonClick);

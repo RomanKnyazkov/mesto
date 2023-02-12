@@ -29,6 +29,7 @@
 
 @media (max-width: 900px) {
   .popup__save {
+    margin-top: 46px;
     padding-top: 15px;
     padding-bottom: 15px;
     margin-left: 22px;
