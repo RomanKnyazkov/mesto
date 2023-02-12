@@ -1,6 +1,6 @@
 //popup
 
-const buttonOpenPopup = document.querySelector('.popup_open');
+const buttonOpenPopup = document.querySelector('.pen_open');
 const popup = document.querySelector('.popup');
 const buttonClosePopup = document.querySelector('.popup__close');
 
