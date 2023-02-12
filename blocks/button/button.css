@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   justify-self: end;
+  cursor: pointer;
 }
 
 .button:hover {

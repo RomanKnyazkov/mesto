@@ -9,7 +9,7 @@
   <body class="page">
 
       <header class="header">
-        <img class="header__logo" src="./images/Vector-W.svg">
+        <img alt="Место Россия" class="header__logo" src="./images/Vector-W.svg">
       </header>
 
     <main class="content">
@@ -18,7 +18,7 @@
         <img class="profile__img" src="./images/Kusto.jpg" alt="Жак-Ив Кусто">
         <div class="profile__box">
           <h1 class="profile__title">Жак-Ив Кусто</h1>
-          <div class="pen"></div>
+          <batton class="pen button_open"></batton>
           <p class="profile__text">Исследователь океана</p>
         </div>
         <div class="button">
@@ -31,32 +31,32 @@
           <li class="element">
             <img class="cards__image" src="./images/karachaevsk.jpg" alt="Карачаевск">
               <p class="cards__text">Карачаевск</p>
-              <div class="cards__like"></div>
+              <Button id="btn1" class="cards__like"></Button>
           </li>
           <li class="element">
             <img class="cards__image" src="./images/albrus.jpg" alt="Гора Эльбрус">
             <p class="cards__text">Гора Эльбрус</p>
-            <div class="cards__like"></div>
+            <Button id="btn2" class="cards__like"></Button>
           </li>
           <li class="element">
             <img class="cards__image" src="./images/dombai.jpg" alt="Домбай">
             <p class="cards__text">Домбай</p>
-            <div class="cards__like"></div>
+            <Button id="btn3" class="cards__like"></Button>
           </li>
           <li class="element">
             <img class="cards__image" src="./images/albrus.jpg" alt="Гора Эльбрус">
             <p class="cards__text">Гора Эльбрус</p>
-            <div class="cards__like"></div>
+            <Button id="btn4" class="cards__like"></Button>
           </li>
           <li class="element">
             <img class="cards__image" src="./images/dombai.jpg" alt="Домбай">
             <p class="cards__text">Домбай</p>
-            <div class="cards__like"></div>
+            <Button id="btn5" class="cards__like"></Button>
           </li>
           <li class="element">
             <img class="cards__image" src="./images/karachaevsk.jpg" alt="Карачаевск">
             <p class="cards__text">Карачаево-Ч...</p>
-            <div class="cards__like"></div>
+            <Button id="btn6" class="cards__like"></Button>
           </li>
         </ul>
       </section>
@@ -67,15 +67,18 @@
 
       <div class="popup">
         <div class="popup__owerlay"></div>
-        <div class="popup__container">
+        <form class="popup__container">
           <p class="popup__title">Редактировать профиль</p>
-          <p class="popup__name">Жак-Ив Кусто</p>
-          <p class="popup__profile">Иследователь океана</p>
-          <div class="popup__botton">Сохранить</div>
-          <div class="popup__close"></div>
-        </div>
+          <label>
+            <input class="popup__name" type="name" name="name" placeholder="Жак-Ив Кусто">
+          </label>
+          <label>
+            <input class="popup__profile" type="name" name="profile" placeholder="Иследователь океана">
+          </label>
+          <button class="popup__save">Сохранить</button>
+          <batton class="popup__close"></batton>
+        </form>
       </div>
-
 
       <script src="./script.js"></script>
       

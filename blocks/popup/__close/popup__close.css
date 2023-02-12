@@ -1,5 +1,10 @@
 .popup__close {
   position: absolute;
+  cursor: pointer;
+}
+
+.popup__close:hover {
+  opacity: 0.6;
 }
 
 @media (min-width: 900px) {

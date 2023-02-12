@@ -1,24 +1,26 @@
-.popup__botton {
+.popup__save {
   margin: 0;
   margin-top: 47px;
-  padding-top: 15px;
-  background: #000000;
+  background-color: #000000;
   border-radius: 2px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   text-align: center;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
-.popup__botton:hover {
+.popup__save:hover {
   opacity: 0.8;
 }
 
 @media (min-width: 900px) {
-  .popup__botton {
-    width: 358px;
-    height: 35px;
+  .popup__save {
+    padding-top: 17px;
+    padding-bottom: 17px;
+    max-width: 358px;
+    max-height: 52px;
     font-size: 18px;
     line-height: 22px;
     margin-left: 36px;
@@ -27,10 +29,12 @@
 }
 
 @media (max-width: 900px) {
-  .popup__botton {
+  .popup__save {
+    padding-top: 15px;
+    padding-bottom: 15px;
     margin-left: 22px;
-    width: 238px;
-    height: 31px;
+    max-width: 238px;
+    max-height: 45px;
     font-size: 14px;
     line-height: 17px;
   }

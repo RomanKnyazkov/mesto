@@ -5,6 +5,9 @@
   position: absolute;
   right: 20px;
   bottom: 30px;
+  cursor: pointer;
+  border: 0;
+  
 }
 
 .cards__like:hover {

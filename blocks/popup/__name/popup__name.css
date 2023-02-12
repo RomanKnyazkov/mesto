@@ -1,8 +1,8 @@
 .popup__name {
   margin: 0;
   height: 28px;
-  opacity: 0.2;
-  border-bottom: 1px solid #000000;
+  border: none;
+  border-bottom: 1px solid #aeaeae;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -14,14 +14,14 @@
 @media (min-width: 900px) {
   .popup__name {
     margin-left: 36px;
-    margin-top: 50px;
+    margin-top: 43px;
     width: 358px;
   }
 }
 
 @media (max-width: 900px) {
   .popup__name {
-    margin-top: 72px;
+    margin-top: 70px;
     margin-left: 22px;
     width: 238px;
   }

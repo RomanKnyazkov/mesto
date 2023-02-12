@@ -1,5 +1,6 @@
 .pen {
   position: absolute;
+  cursor: pointer;
 }
 
 .pen:hover {
