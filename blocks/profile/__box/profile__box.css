@@ -1,3 +1,21 @@
 .profile__box {
-  position: relative;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  max-width: 336px;
+  align-items: center;
+
 }
+
+
+@media (min-width: 900px) {
+  .profile__box {
+    grid-template-columns: 1fr 24px;
+    }
+  }
+  
+  @media (max-width: 900px) {
+  .profile__box {
+    grid-template-columns: 245px 18px;
+    }
+  }

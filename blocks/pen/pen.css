@@ -1,5 +1,4 @@
 .pen {
-  position: absolute;
   cursor: pointer;
 }
 
@@ -9,11 +8,10 @@
 
 @media (min-width: 900px) {
   .pen {
+    margin-top: 10px;
     background-image: url(../../images/pen.svg);
     height: 24px;
     width: 24px;
-    right: 15px;
-    top: 34px;
   }
 }
 
@@ -22,7 +20,6 @@
     background-image: url(../../images/penMobil.svg);
     height: 18px;
     width: 18px;
-    right: 38px;
-    top: 8px;
+    align-self: end;
   }
 }

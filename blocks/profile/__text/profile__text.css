@@ -1,10 +1,11 @@
 .profile__text {
-  margin-top: 8px;
+  margin: 0;
+  margin-top: 10px;
   display: block;
-  font-family: 'Inter';
   font-style: normal;
   color: #FFFFFF;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 @media (min-width: 900px) {
@@ -18,5 +19,6 @@
   .profile__text {
     font-size: 14px;
     line-height: 17px;
+    margin-left: 35px;
   }
 }
