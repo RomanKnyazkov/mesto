@@ -17,7 +17,9 @@ buttonOpenPopup.addEventListener('click', handleOpenButtonClick);
 buttonClosePopup.addEventListener('click', handleCloseButtonClick);
 
 //SaveText
+
 let popupContainer = document.querySelector('.popup__container');
+
 document.querySelector('.popup__container').addEventListener('submit', (event) => {
   event.preventDefault();
 
