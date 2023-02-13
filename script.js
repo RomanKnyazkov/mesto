@@ -21,7 +21,6 @@ let popupContainer = document.querySelector('.popup__container');
 document.querySelector('.popup__container').addEventListener('submit', (event) => {
   event.preventDefault();
 
-
   let popupName = document.querySelector('.popup__name').value;
   let popupprofile = document.querySelector('.popup__profile').value;
 
