@@ -3,13 +3,13 @@
   justify-content: center;
 }
 
-@media (min-width: 900px) {
+@media (max-width: 3000px) {
   .cards {
   margin-top: 50px;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1023px) {
   .cards {
   margin-top: 35px;
   }

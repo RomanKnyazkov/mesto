@@ -18,48 +18,46 @@
         <img class="profile__img" src="./images/Kusto.jpg" alt="Жак-Ив Кусто">
         <div class="profile__box">
           <h1 class="profile__title">Жак-Ив Кусто</h1>
-          <div class="pen pen_open"></div>
+          <button type="button" class="profile__pen"></button>
           <p class="profile__text">Исследователь океана</p>
         </div>
-        <div class="button">
-          <div class="button__img"></div>
-        </div>
+        <div class="profile__button">+</div>
       </section>
 
-      <div class="cards">
+      <section class="cards">
         <ul class="cards__elements">
-          <li class="element">
+          <li class="cards__element">
             <img class="cards__image" src="./images/karachaevsk.jpg" alt="Карачаевск">
-            <p class="cards__text">Карачаевск</p>
+            <h2 class="cards__text">Карачаевск</h2>
             <button type="button" class="cards__like"></button>
           </li>
-          <li class="element">
+          <li class="cards__element">
             <img class="cards__image" src="./images/albrus.jpg" alt="Гора Эльбрус">
-            <p class="cards__text">Гора Эльбрус</p>
+            <h2 class="cards__text">Гора Эльбрус</h2>
             <button type="button" class="cards__like"></button>
           </li>
-          <li class="element">
+          <li class="cards__element">
             <img class="cards__image" src="./images/dombai.jpg" alt="Домбай">
-            <p class="cards__text">Домбай</p>
+            <h2 class="cards__text">Домбай</h2>
             <button type="button" class="cards__like"></button>
           </li>
-          <li class="element">
+          <li class="cards__element">
             <img class="cards__image" src="./images/albrus.jpg" alt="Гора Эльбрус">
-            <p class="cards__text">Гора Эльбрус</p>
+            <h2 class="cards__text">Гора Эльбрус</h2>
             <button type="button" class="cards__like"></button>
           </li>
-          <li class="element">
+          <li class="cards__element">
             <img class="cards__image" src="./images/dombai.jpg" alt="Домбай">
-            <p class="cards__text">Домбай</p>
+            <h2 class="cards__text">Домбай</h2>
             <button type="button" class="cards__like"></button>
           </li>
-          <li class="element">
+          <li class="cards__element">
             <img class="cards__image" src="./images/karachaevsk.jpg" alt="Карачаевск">
-            <p class="cards__text">Карачаево-Черкесск</p>
+            <h2 class="cards__text">Карачаево-Черкесск</h2>
             <button type="button" class="cards__like"></button>
           </li>
         </ul>
-      </div>
+      </section>
     </main>
     <footer class="footer">
       <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
@@ -67,19 +65,15 @@
 
       <div class="popup">
         <form class="popup__container">
-          <p class="popup__title">Редактировать профиль</p>
-          <label>
-            <input class="popup__name input" type="text" placeholder="Жак-Ив Кусто">
-          </label>
-          <label>
-            <input class="popup__profile input" type="text" placeholder="Иследователь океана">
-          </label>
+          <h3 class="popup__title">Редактировать профиль</h3>
+            <input class="popup__input popup__input_name" type="text" value="Жак-Ив Кусто">
+            <input class="popup__input popup__input_profile" type="text" value="Исследователь океана">
           <button type="submit" class="popup__save">Сохранить</button>
-          <div class="popup__close"></div>
+          <batton type="button" class="popup__close"></batton>
         </form>
       </div>
 
-      <script src="./script.js"></script>
+      <script src="./scripts/index.js"></script>
       
   </body>
 </html>

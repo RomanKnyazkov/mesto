@@ -8,13 +8,13 @@
   position: relative;
 }
 
-@media (min-width: 900px) {
+@media (max-width: 3000px) {
   .page {
     max-width: 1280px;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1023px) {
   .page {
     max-width: 320px;
   }

@@ -1,0 +1,32 @@
+.profile__button {
+  margin: 0;
+  height: 48px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 29px;
+  font-family: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+}
+
+.profile__button:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 3000px) {
+  .profile__button {
+    width: 147px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .profile__button {
+    margin-top: 35px;
+    width: 279px;
+  }
+}

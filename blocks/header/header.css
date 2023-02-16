@@ -1,18 +1,17 @@
 .header {
-  border-bottom: 1px solid #545454;
+  border-bottom: 1px solid rgba(84, 84, 84, .7);;
   display: block;
   margin: 0 auto;
 }
 
-@media (min-width: 900px) {
+@media (max-width: 3000px) {
 .header {
-    max-height: 56px;
     padding-bottom: 60px;
     max-width: 880px;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1023px) {
 .header {
   padding: 0;
   }

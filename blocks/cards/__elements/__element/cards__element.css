@@ -1,11 +1,10 @@
-.element {
+.cards__element {
   list-style-type: none;
   margin: 0;
   width: 282px;
-  height: 361px;
   padding: 0;
   background-color: #FFF;
-  border-radius: 4%;
+  border-radius: 10px;
   overflow: hidden;
   display: grid;
   grid-template-columns: 240px 1fr;

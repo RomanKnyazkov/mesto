@@ -1,0 +1,17 @@
+.popup__input_name {
+  margin: 0;
+  padding: 0;
+
+}
+
+@media (max-width: 3000px) {
+  .popup__input_name {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .popup__input_name {
+    margin-top: 65px;
+  }
+}
