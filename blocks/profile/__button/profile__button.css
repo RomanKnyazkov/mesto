@@ -3,15 +3,10 @@
   height: 48px;
   border: 2px solid #fff;
   cursor: pointer;
-  color: #fff;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 29px;
-  font-family: italic;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 2px;
+  background-image: url(../../../images/profilebutton.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .profile__button:hover {
@@ -21,12 +16,14 @@
 @media (max-width: 3000px) {
   .profile__button {
     width: 147px;
+    justify-self: end;
   }
 }
 
 @media (max-width: 1023px) {
   .profile__button {
-    margin-top: 35px;
+    margin-top: 32px;
     width: 279px;
+    background-size: 16px;
   }
 }

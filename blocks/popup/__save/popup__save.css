@@ -8,7 +8,6 @@
   color: #FFFFFF;
   cursor: pointer;
   width: 100%;
-  margin-top: 48px;
 }
 
 .popup__save:hover {
@@ -17,6 +16,7 @@
 
 @media (max-width: 3000px) {
   .popup__save {
+    margin-top: 48px;
     margin-bottom: 35px;
     height: 52px;
     font-size: 18px;
@@ -26,6 +26,7 @@
 
 @media (max-width: 1023px) {
   .popup__save {
+    margin-top: 47px;
     height: 45px;
     font-size: 14px;
     line-height: 17px;

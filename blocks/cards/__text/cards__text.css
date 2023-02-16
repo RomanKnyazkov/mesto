@@ -1,5 +1,6 @@
 .cards__text {
-  margin: 35px 22px 31px;
+  margin: 0;
+  margin-left: 22px;
   color: #000;
   font-style: normal;
   font-weight: 900;

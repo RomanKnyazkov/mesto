@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../../../images/pen.svg);
+  z-index: 1;
 }
 
 .profile__pen:hover {
@@ -25,5 +26,8 @@
     background-size: 7.5px;
     height: 18px;
     width: 18px;
+    align-self: end;
+    margin-top: 0;
+    margin-bottom: 4px;
   }
 }
