@@ -6,6 +6,7 @@
   cursor: pointer;
   border: 0;
   z-index: 2;
+  padding: 0;
 }
 
 .cards__like:hover {

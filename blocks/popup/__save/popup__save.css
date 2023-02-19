@@ -1,7 +1,8 @@
 .popup__save {
   margin: 0;
   padding: 0;
-  background-color: #000000;
+  background-color: #000;
+  border: none;
   border-radius: 2px;
   font-style: normal;
   font-weight: 400;

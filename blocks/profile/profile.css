@@ -1,6 +1,6 @@
 .profile {
   margin: 0;
-  padding-top: 40px;
+  padding-top: 38px;
   display: grid;
   align-items: center;
   max-width: 880px;
@@ -14,7 +14,7 @@
   margin: 0 auto;
   display: block;
   text-align: center;
-  padding-top: 38px;
+  padding-top: 43px;
   max-width: 282px;
   }
 }
