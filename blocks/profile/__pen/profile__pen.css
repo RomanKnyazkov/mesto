@@ -1,24 +1,19 @@
 .profile__pen {
   cursor: pointer;
-  background-color: black;
+  background-color: transparent;
   border: 1px solid #FFFFFF;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../../../images/pen.svg);
   z-index: 1;
+  margin-top: 10px;
+  background-size: 10px;
+  height: 24px;
+  width: 24px;
 }
 
 .profile__pen:hover {
   opacity: 0.6;
-}
-
-@media (max-width: 3000px) {
-  .profile__pen {
-    margin-top: 10px;
-    background-size: 10px;
-    height: 24px;
-    width: 24px;
-  }
 }
 
 @media (max-width: 1023px) {

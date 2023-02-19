@@ -1,12 +1,7 @@
 .cards {
   display: flex;
   justify-content: center;
-}
-
-@media (max-width: 3000px) {
-  .cards {
   margin-top: 50px;
-  }
 }
 
 @media (max-width: 1023px) {

@@ -6,12 +6,7 @@
   margin: 0 auto;
   background-color: #000;
   position: relative;
-}
-
-@media (max-width: 3000px) {
-  .page {
-    max-width: 1280px;
-  }
+  max-width: 1280px;
 }
 
 @media (max-width: 1023px) {

@@ -21,7 +21,7 @@
           <button type="button" class="profile__pen"></button>
           <p class="profile__text">Исследователь океана</p>
         </div>
-        <div class="profile__button"></div>
+        <button type="button" class="profile__button"></button>
       </section>
 
       <section class="cards">
@@ -64,13 +64,19 @@
     </footer>
 
       <div class="popup">
-        <form class="popup__container">
+
+        <div class="popup__container">
           <h3 class="popup__title">Редактировать профиль</h3>
-            <input class="popup__input popup__input_name" type="text" value="Жак-Ив Кусто">
-            <input class="popup__input popup__input_profile" type="text" value="Исследователь океана">
-          <button type="submit" class="popup__save">Сохранить</button>
+
+          <form class="popup__form" name="FormPopup">
+            <input class="popup__input popup__input_value_name" type="text" name="formName">
+            <input class="popup__input popup__input_value_profile" type="text" name="formProfile">
+            <button type="submit" class="popup__save">Сохранить</button>
+          </form>
+
           <button type="button" class="popup__close"></button>
-        </form>
+          
+        </div>
       </div>
 
       <script src="./scripts/index.js"></script>

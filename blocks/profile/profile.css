@@ -1,9 +1,5 @@
 .profile {
   margin: 0;
-}
-
-@media (max-width: 3000px) {
-.profile {
   padding-top: 40px;
   display: grid;
   align-items: center;
@@ -11,7 +7,6 @@
   grid-template-columns: 121px 1fr 1fr;
   grid-template-rows: 1fr;
   gap: 30px;
-  }
 }
 
 @media (max-width: 1023px) {
