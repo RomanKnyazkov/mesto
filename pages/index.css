@@ -35,3 +35,22 @@
 @import url(../blocks/popup/__input/_value/popup__input_value_profile.css);
 @import url(../blocks/popup/__input/popup__input.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
+
+
+.popup__title-card {
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+color: #FFFFFF;
+}
+
+.popup__img-card {
+  max-width: 75vw;
+  max-height: 75vh;
+}
+
+.popup-card__container {
+position: relative;
+}
