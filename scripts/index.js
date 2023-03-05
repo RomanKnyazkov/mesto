@@ -143,26 +143,44 @@ CardsLike.forEach((likeButton) => {
 
 // Раскрытие карточки
 
-const buttonOpenPopupCard =  document.querySelector('.cards__element');
-const buttonClosePopupCard = document.querySelector('.popup-card__close');
-const popupСard = document.querySelector('.popup-card');
-const popupImgCard = document.querySelector('.popup__img-card');
-const popupTitleCard = document.querySelector('.popup__title-card');
-const cardsImage = document.querySelector('.cards__image');
-const cardsText = document.querySelector('.cards__text');
+// const buttonOpenPopupCard =  document.querySelector('.cards__element');
+// const buttonClosePopupCard = document.querySelector('.popup-card__close');
+// const popupСard = document.querySelector('.popup-card');
+// const popupImgCard = document.querySelector('.popup__img-card');
+// const popupTitleCard = document.querySelector('.popup__title-card');
+// const cardsImage = document.querySelector('.cards__image');
+// const cardsText = document.querySelector('.cards__text');
+
+
+// // const cardOpenButtonClick = () => {
+// //   popupСard.classList.add('popup_opened');
+// //   popupImgCard.src = cardsImage.src;
+// //   popupTitleCard.textContent = cardsText.outerText;
+// // }
+
+
+// // const cardCloseButtonClick = () => {
+// //   popupСard.classList.remove('popup_opened');
+// // }
+
+// // buttonOpenPopupCard.addEventListener('click', cardOpenButtonClick);
+// // buttonClosePopupCard.addEventListener('click', cardCloseButtonClick);
 
 
 
 
+// const renderItem = (wrap, popupСard) => {
+//   wrap.append(getItemElement(popupСard))
+// }
 
-const cardOpenButtonClick = () => {
-  popupСard.classList.add('popup_opened');
-  popupImgCard.src = cardsImage.src;
-  popupTitleCard.textContent = cardsText.outerText;
-}
-const cardCloseButtonClick = () => {
-  popupСard.classList.remove('popup_opened');
-}
+// initialItems.forEach((popupСard) => {
+//   renderItem(itemListWrapper, popupСard)
+// })
 
-buttonOpenPopupCard.addEventListener('click', cardOpenButtonClick);
-buttonClosePopupCard.addEventListener('click', cardCloseButtonClick);
+//   const getItemElement = () => {
+//   buttonOpenPopupCard.classList.add('popup_opened');
+//   popupImgCard.src = cardsImage.src;
+//   popupTitleCard.textContent = cardsText.outerText;
+//   cardsButton.addEventListener('click', buttonOpenPopupCard);
+// };
+
