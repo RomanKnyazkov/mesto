@@ -96,7 +96,7 @@ const root = document.querySelector(".page");
 createCard = (text, link) => {
   const li = document.createElement("li");
   const img = document.createElement("img");
-  const h2 = document.createElement("h2");
+  const h3 = document.createElement("h2");
   const button = document.createElement("button");
   const deleteButton = document.createElement("deleteButton");
 
@@ -105,12 +105,12 @@ createCard = (text, link) => {
   li.classList.add("cards__element");
   li.setAttribute("id", link);
   img.classList.add("cards__image");
-  h2.classList.add("cards__text");
+  h3.classList.add("cards__text");
   button.classList.add("cards__like");
   deleteButton.classList.add("cards__delete");
 
   img.src = link;
-  h2.textContent = text;
+  h3.textContent = text;
   img.setAttribute('alt', text)
 
   cardsElements.prepend(li);
