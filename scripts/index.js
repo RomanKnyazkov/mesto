@@ -100,7 +100,7 @@ createCard = (text, link) => {
   const button = document.createElement("button");
   const deleteButton = document.createElement("deleteButton");
 
-  li.append(img, h2, button, deleteButton);
+  li.append(img, h3, button, deleteButton);
 
   li.classList.add("cards__element");
   li.setAttribute("id", link);
