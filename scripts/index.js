@@ -124,8 +124,8 @@ initialCards.forEach((card) => {
 
 // Создаем и добавляем элемент на страницу
 
-const cardsValueName = document.querySelector(".popup-cards__input_value_name");
-const cardsValueImg = document.querySelector(".popup-cards__input_value_img");
+const cardsValueName = document.querySelector(".popup__input_value_name-img");
+const cardsValueImg = document.querySelector(".popup__input_value_img");
 const popupCardsForm = document.querySelector(".popup-cards__form");
 
 popupCardsForm.addEventListener("submit", saveCard);
