@@ -1,186 +1,190 @@
-const buttonOpenPopup = document.querySelector('.profile__pen');
-const popup = document.querySelector('.popup');
-const buttonClosePopup = document.querySelector('.popup__close');
-let popupForm = document.querySelector('.popup__form');
-let popupName = document.querySelector('.popup__input_value_name');
-let popupProfile = document.querySelector('.popup__input_value_profile');
-let title = document.querySelector('.profile__title');
-let profile = document.querySelector('.profile__text');
-
-const popupСards = document.querySelector('.popup-cards');
+const buttonOpenPopup = document.querySelector(".profile__pen");
+const popup = document.querySelector(".popup");
+const buttonClosePopup = document.querySelector(".popup__close");
+const popupForm = document.querySelector(".popup__form");
+const popupName = document.querySelector(".popup__input_value_name");
+const popupProfile = document.querySelector(".popup__input_value_profile");
+const title = document.querySelector(".profile__title");
+const profile = document.querySelector(".profile__text");
+const popupСards = document.querySelector(".popup-cards");
+const popupImage = document.querySelector(".popup__img-card");
+const popupСard = document.querySelector(".popup-card");
+const popupTitleCard = document.querySelector(".popup__title-card");
 
 //popupProfile open.close
 
 const handleOpenButtonClick = () => {
-  popup.classList.add('popup_opened');
+  popup.classList.add("popup_opened");
   popupName.value = title.innerText;
   popupProfile.value = profile.innerText;
-}
+};
 
 const handleCloseButtonClick = () => {
-  popup.classList.remove('popup_opened');
-}
+  popup.classList.remove("popup_opened");
+  popup.classList.add("popup_active");
+};
 
-buttonOpenPopup.addEventListener('click', handleOpenButtonClick);
-buttonClosePopup.addEventListener('click', handleCloseButtonClick);
+const closeImagePopup = () => {
+  popupСard.classList.remove("popup_opened");
+};
+
+buttonOpenPopup.addEventListener("click", handleOpenButtonClick);
+buttonClosePopup.addEventListener("click", handleCloseButtonClick);
 
 //SaveText
 
-popupForm.addEventListener('submit', (event) => {
-event.preventDefault();
+popupForm.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-title.textContent = popupName.value;
-profile.textContent = popupProfile.value;
+  title.textContent = popupName.value;
+  profile.textContent = popupProfile.value;
 
-handleCloseButtonClick();
+  handleCloseButtonClick();
 });
 
 //popupCards open.close
 
-const buttonOpenPopupCards =  document.querySelector('.profile__button');
-const buttonClosePopupCards = document.querySelector('.popup-cards__close');
+const buttonOpenPopupCards = document.querySelector(".profile__button");
+const buttonClosePopupCards = document.querySelector(".popup-cards__close");
 
-const CardsOpenButtonClick = () => {
-  popupСards.classList.add('popup_opened');
-}
+const cardsOpenButtonClick = () => {
+  popupСards.classList.add("popup_opened");
+  popupСards.classList.add("popup_active");
+};
+const cardsCloseButtonClick = () => {
+  popupСards.classList.remove("popup_opened");
+};
 
-const CardsCloseButtonClick = () => {
-  popupСards.classList.remove('popup_opened');
-}
-
-buttonOpenPopupCards.addEventListener('click', CardsOpenButtonClick);
-buttonClosePopupCards.addEventListener('click', CardsCloseButtonClick);
+buttonOpenPopupCards.addEventListener("click", cardsOpenButtonClick);
+buttonClosePopupCards.addEventListener("click", cardsCloseButtonClick);
 
 //popupCards Добавление карточки
 
-let initialCards = [
+const initialCards = [
   {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+    name: "Архыз",
+    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg",
   },
   {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+    name: "Челябинская область",
+    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg",
   },
   {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+    name: "Иваново",
+    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg",
   },
   {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+    name: "Камчатка",
+    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg",
   },
   {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+    name: "Холмогорский район",
+    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg",
   },
   {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-]; 
+    name: "Байкал",
+    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
+  },
+];
 
 // Создаем карточку
 
-const cardsElements = document.querySelector('.cards__elements');
-const cardsElement = document.querySelector('.cards__element');
+const cardsElements = document.querySelector(".cards__elements");
+const cardsElement = document.querySelector(".cards__element");
+const root = document.querySelector(".page");
 
 createCard = (text, link) => {
+  const li = document.createElement("li");
+  const img = document.createElement("img");
+  const h2 = document.createElement("h2");
+  const button = document.createElement("button");
+  const deleteButton = document.createElement("deleteButton");
 
-let li = document.createElement("li");
-let img = document.createElement("img");
-let h2 = document.createElement("h2");
-let button = document.createElement("button");
+  li.append(img, h2, button, deleteButton);
 
-li.append(img, h2, button);
+  li.classList.add("cards__element");
+  li.setAttribute("id", link);
+  img.classList.add("cards__image");
+  h2.classList.add("cards__text");
+  button.classList.add("cards__like");
+  deleteButton.classList.add("cards__delete");
 
-li.classList.add('cards__element')
-img.classList.add('cards__image')
-h2.classList.add('cards__text')
-button.classList.add('cards__like')
+  img.src = link;
+  h2.textContent = text;
+  img.setAttribute('alt', text)
 
-img.src = link;
-h2.append(text);
-
-cardsElements.append(li);
-}
+  cardsElements.prepend(li);
+};
 
 //Добавляем карточки на страницу
 
-addCard = (name, link) => {}
-
-initialCards.forEach(card => {
-addCard(card.name, card.link);
-createCard(card.name, card.link)
+initialCards.forEach((card) => {
+  createCard(card.name, card.link);
 });
 
 // Создаем и добавляем элемент на страницу
 
-const cardsValueName = document.querySelector('.popup-cards__input_value_name');
-const cardsValueImg = document.querySelector('.popup-cards__input_value_img');
-const popupCardsForm = document.querySelector('.popup-cards__form');
+const cardsValueName = document.querySelector(".popup-cards__input_value_name");
+const cardsValueImg = document.querySelector(".popup-cards__input_value_img");
+const popupCardsForm = document.querySelector(".popup-cards__form");
 
-popupCardsForm.addEventListener('submit', (event) => {
+popupCardsForm.addEventListener("submit", saveCard);
+
+function saveCard(event) {
   event.preventDefault();
-  
   text = cardsValueName.value;
   link = cardsValueImg.value;
   createCard(text, link);
-  CardsCloseButtonClick();
-});
+  cardsCloseButtonClick();
+  popupCardsForm.reset();
+}
 
+const CardsLike = document.querySelectorAll(".cards__like");
 
-//Like
-const CardsLike = document.querySelectorAll('.cards__like');
+function handleCardList(event) {
+  if (event.target.classList.contains("cards__like")) {
+    if (event.target.classList.contains("cards__like_active")) {
+      removeLike(event.target);
+    } else {
+      setLike(event.target);
+    }
+  } else if (event.target.classList.contains("cards__delete")) {
+    deleteCard(event.target);
+  }
+}
 
-CardsLike.forEach((likeButton) => {
+function removeLike(element) {
+  element.classList.remove("cards__like_active");
+}
 
-  likeButton.addEventListener('click', (cardsLikeActive) => {
-    
-    cardsLikeActive.target.classList.toggle('cards__like_active');
-  });
-});
+function setLike(element) {
+  element.classList.add("cards__like_active");
+}
 
-// Раскрытие карточки
+function deleteCard(element) {
+  const elementToDelete = element.closest(".cards__element");
+  cardsElements.removeChild(elementToDelete);
+}
 
-// const buttonOpenPopupCard =  document.querySelector('.cards__element');
-// const buttonClosePopupCard = document.querySelector('.popup-card__close');
-// const popupСard = document.querySelector('.popup-card');
-// const popupImgCard = document.querySelector('.popup__img-card');
-// const popupTitleCard = document.querySelector('.popup__title-card');
-// const cardsImage = document.querySelector('.cards__image');
-// const cardsText = document.querySelector('.cards__text');
+function handlePopup(event) {
+  if (event.target.classList.contains("cards__image")) {
+    openPopup(event.target);
+  } else if (event.target.classList.contains("popup__close")) {
+    closeImagePopup();
+  }
+}
 
+function openPopup(element) {
+  const src = element.getAttribute("src");
+  popupImage.setAttribute("src", src);
+  const parent = element.closest(".cards__element");
+  const cardName = parent.querySelector(".cards__text").textContent;
 
-// // const cardOpenButtonClick = () => {
-// //   popupСard.classList.add('popup_opened');
-// //   popupImgCard.src = cardsImage.src;
-// //   popupTitleCard.textContent = cardsText.outerText;
-// // }
+  popupTitleCard.textContent = cardName;
 
+  popupСard.classList.add("popup_opened");
+  popupСard.classList.add("popup_active");
+}
 
-// // const cardCloseButtonClick = () => {
-// //   popupСard.classList.remove('popup_opened');
-// // }
-
-// // buttonOpenPopupCard.addEventListener('click', cardOpenButtonClick);
-// // buttonClosePopupCard.addEventListener('click', cardCloseButtonClick);
-
-
-
-
-// const renderItem = (wrap, popupСard) => {
-//   wrap.append(getItemElement(popupСard))
-// }
-
-// initialItems.forEach((popupСard) => {
-//   renderItem(itemListWrapper, popupСard)
-// })
-
-//   const getItemElement = () => {
-//   buttonOpenPopupCard.classList.add('popup_opened');
-//   popupImgCard.src = cardsImage.src;
-//   popupTitleCard.textContent = cardsText.outerText;
-//   cardsButton.addEventListener('click', buttonOpenPopupCard);
-// };
-
+cardsElements.addEventListener("click", handleCardList);
+root.addEventListener("click", handlePopup);
