@@ -6,10 +6,10 @@ const userNameInput = document.querySelector(".popup__input_value_name");
 const userDescriptionInput = document.querySelector(".popup__input_value_description");
 const userName = document.querySelector(".profile__title");
 const userDescription = document.querySelector(".profile__text");
-const addingCardPopup = document.querySelector(".new-card-popup");
+const addingCardPopup = document.querySelector(".popup__new-card-popup");
 const popupImage = document.querySelector(".popup__img");
 const bigImagePopup = document.querySelector(".popup__big-image-popup");
-const imagePopupTitle = document.querySelector(".popup__title_img-title");
+const imagePopupTitle = document.querySelector(".popup__img-title");
 const addCardButton = document.querySelector(".profile__add-card-button");
 const buttonClosePopupCards = document.querySelector(".popup-cards__close");
 const cardsElements = document.querySelector(".cards__elements");
@@ -53,18 +53,6 @@ const openEditPopup = () => {
   userDescriptionInput.value = userDescription.innerText;
 };
 
-
-// Слушателиь открытия Popup профайла
-profileOpenButton.addEventListener("click", openEditPopup);
-
-// Сохрание данных пользователя
-editProfileForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  userName.textContent = userNameInput.value;
-  userDescription.textContent = userDescriptionInput.value;
-  closePopup(editProfilePopup);
-});
-
 // Открытия popup для создания карточки
 const openAddCardPopup = () => {
   openPopup(addingCardPopup);
@@ -74,9 +62,6 @@ const openAddCardPopup = () => {
 const cardsCloseButtonClick = () => {
   closePopup(addingCardPopup)
 };
-
-// Слушатели открытия popup, создания карточки
-addCardButton.addEventListener("click", openAddCardPopup);
 
 // Функция снять лайк
 const removeLike = (element) => {
@@ -88,7 +73,7 @@ const setLike = (element) => {
   element.classList.add("card__like_active");
 }
 
-// Функция поставить и снять лайк
+// Функция поставить и снять лайк или открыть большую картинку
 const handleCardList = (event) => {
   if (event.target.classList.contains("card__like")) {
     if (event.target.classList.contains("card__like_active")) {
@@ -127,7 +112,6 @@ const openPopupImg = (element) => {
 
 const template = document.querySelector('#card')
 
-
 function createCardTemplate (text, link) {
   const clone = template.content.cloneNode(true)
   const img = clone.querySelector(".card__image");
@@ -156,12 +140,9 @@ initialCards.forEach((card) => {
   createCardTemplate(card.name, card.link);
 });
 }
-// Слушатель кнопки добавления карточки на страницу
-addCardForm.addEventListener("submit", saveCard);
 
 // Функция закрытия Popup
 function closePopup(popup) {
-  console.log({popup})
   popup.classList.remove('popup_opened');
 }
 
@@ -170,11 +151,29 @@ function openPopup(popup) {
   popup.classList.add('popup_opened');
 }
 
+// Слушатели открытия popup, создания карточки
+addCardButton.addEventListener("click", openAddCardPopup);
+
 // Устанавливаем обработчкик на крестик карточки
 closeButtons.forEach((button) => {
   const popup = button.closest('.popup');
   button.addEventListener('click', () => closePopup(popup));
 });
 
-// Слушатель который отвечает за лайки, удаления, за открытие картинки
+// Слушатель который отвечает за лайки, удаления, открытие картинки
 cardsElements.addEventListener("click", handleCardList);
+
+// Слушателиь открытия Popup профайла
+profileOpenButton.addEventListener("click", openEditPopup);
+
+// Слушатель сохранения данных пользователя
+editProfileForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  userName.textContent = userNameInput.value;
+  userDescription.textContent = userDescriptionInput.value;
+  closePopup(editProfilePopup);
+});
+
+// Слушатель кнопки добавления карточки на страницу
+addCardForm.addEventListener("submit", saveCard);
+
